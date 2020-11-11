@@ -1,0 +1,35 @@
+#Count the No. of Players scored more than 400
+
+select count(*)
+FROM iplbatting
+where Runs>400 
+
+#Top 10 Batting Averages of IPL2020 with more than 4 Innings
+
+SELECT player,Bat_Avg
+from iplbatting
+where Inns>4
+order by Bat_Avg desc
+limit 10;
+
+#Players with more than 8 Inns has Batting Average between 25 to 60
+
+SELECT player,Team,Inns,Bat_Avg
+from iplbatting
+where Inns>8 AND 
+Bat_Avg between 25 AND 60
+
+#Players with more than 6 Inns has Batting Strike Rate between 130 and 200
+
+SELECT Player,Team,Batstrike
+from iplbatting
+where Inns>6 AND
+Batstrike between 130 AND 200
+order by Batstrike desc;
+
+#Player with More runs in Contribution
+
+SELECT Player,Team,Contribution
+from iplbatting
+order by Contribution desc;
+
