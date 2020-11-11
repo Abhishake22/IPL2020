@@ -33,3 +33,12 @@ SELECT Player,Team,Contribution
 from iplbatting
 order by Contribution desc;
 
+#Best Allrounder for the Tournament with >250 Runs and >10wickets
+
+select iplbatting.Player,iplbatting.Team,iplbowling.Wickets,iplbowling.Economy
+FROM iplbatting
+INNER join iplbowling
+ON iplbatting.Player = iplbowling.Player
+where iplbatting.Runs>250 and iplbowling.Wickets>10
+
+
