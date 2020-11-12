@@ -42,3 +42,26 @@ ON iplbatting.Player = iplbowling.Player
 where iplbatting.Runs>250 and iplbowling.Wickets>10
 
 
+#Wikcets Takers in IPL2020
+
+SELECT Player,Team,wickets
+FROM iplbowling
+order by Wickets desc;
+
+#Top 15 Bowling Averages of Ipl2020
+
+SELECT Player,Team,BowlAvg,wickets
+FROM iplbowling
+WHERE Wickets>=1
+order by BowlAvg ASC
+LIMIT 15;
+
+#Bowler with Atleast one Maiden in IPL2020
+
+SELECT Player,Team,Maidens
+FROM iplbowling
+WHERE Maidens>=1
+order by Maidens desc
+
+
+
