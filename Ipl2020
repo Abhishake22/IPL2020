@@ -63,5 +63,24 @@ FROM iplbowling
 WHERE Maidens>=1
 order by Maidens desc
 
+# Query to find Individual Player record
+
+SELECT iplbatting.Player,iplbatting.Runs,iplbatting.Bat_Avg,iplbowling.wickets,iplbowling.BowlAvg,iplbowling.Bowlstrike
+from iplbatting
+join iplbowling
+ON iplbatting.player=iplbowling.Player
+group by iplbatting.Player
+having Player = 'Dube, S'
+
+# Undeerated Players
+
+SELECT iplbatting.Player,iplbatting.Matches,iplbatting.Runs,iplbatting.Bat_Avg,iplbowling.wickets,iplbowling.BowlAvg,iplbowling.Bowlstrike,iplbowling.Economy
+from iplbatting
+join iplbowling
+ON iplbatting.player=iplbowling.Player
+group by iplbatting.Player
+having Player IN ('Jadeja, R A','Tewatia, R','Kartik Tyagi','Shivam Mavi','Holder, J O','Ravi Bishnoi','Ashwin, M','Chahar, R D','Rana, N','Mohammed Siraj','Morris, C H','Buttler, J C')
+
+
 
 
