@@ -82,5 +82,11 @@ group by iplbatting.Player
 having Player IN ('Jadeja, R A','Tewatia, R','Kartik Tyagi','Shivam Mavi','Holder, J O','Ravi Bishnoi','Ashwin, M','Chahar, R D','Rana, N','Mohammed Siraj','Morris, C H','Buttler, J C')
 
 
+#Most No of catches
+
+select player,ca
+from iplbatting
+group by player
+order by ca desc
 
 
