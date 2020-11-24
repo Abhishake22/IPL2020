@@ -97,3 +97,10 @@ from iplbatting
 where 100s>=1 
 order by 100s desc
 
+
+#Teams and No. of wickets
+
+select Team,sum(Wickets),count(Player),avg(Economy)
+from iplbowling
+group by Team order by wickets desc
+
