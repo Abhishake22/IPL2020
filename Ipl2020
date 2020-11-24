@@ -90,3 +90,10 @@ group by player
 order by ca desc
 
 
+#List of Batsmen who scored 100
+
+select player,Team,100s
+from iplbatting
+where 100s>=1 
+order by 100s desc
+
