@@ -104,3 +104,10 @@ select Team,sum(Wickets),count(Player),avg(Economy)
 from iplbowling
 group by Team order by wickets desc
 
+
+#Finding Economy Rates of IPL Teams
+
+select Team,round(avg(Economy),1) as Economy_Rate
+from iplbowling
+group by Team order by Economy_Rate ASC
+
