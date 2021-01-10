@@ -111,3 +111,14 @@ select Team,round(avg(Economy),1) as Economy_Rate
 from iplbowling
 group by Team order by Economy_Rate ASC
 
+
+
+#Players with most number of stumpings
+
+select player,st
+from iplbatting
+group by player
+order by st desc
+limit 5
+
+
